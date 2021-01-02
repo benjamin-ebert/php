@@ -11,7 +11,7 @@ RUN curl --silent --show-error --fail --location \
 # output caddy version \
 && caddy -version \
 # install some php extensions needed for laravel \
-&& docker-php-ext-install mbstring pdo pdo_mysql \
+&& docker-php-ext-install mbstring pdo pdo_mysql opcache \
 # create project root to be used by caddy (see Caddyfile) \
 && mkdir -p /srv/app/public
 
